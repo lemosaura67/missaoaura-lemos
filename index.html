@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Aura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <p class="identificacao">PROJETO AURA // ANO 2089</p>
+        <h1>Missão Aura</h1>
+        <p>Descubra seu perfil para a exploração de um novo planeta.</p>
+    </header>
+
+    <main class="container">
+        <section class="introducao">
+            <h2>Recruta, precisamos de você!</h2>
+            <p>
+                A equipe espacial está selecionando participantes para uma
+                missão em um planeta desconhecido. Responda às perguntas
+                e descubra qual será seu papel nessa aventura.
+            </p>
+        </section>
+
+        <form id="formulario">
+
+            <div class="campo">
+                <label for="nome">Seu Nome completo:</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="nascimento">Data de nascimento:</label>
+                <input
+                    type="date"
+                    id="nascimento"
+                    name="nascimento"
+                    required
+                >
+            </div>
+
+            <fieldset>
+                <legend>1. Você encontra uma máquina desconhecida. O que faz?</legend>
+
+                <label class="opcao">
+                    <input type="radio" name="p1" value="1" required>
+                    Tento consertá-la e descobrir como funciona.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p1" value="2">
+                    Analiso seus componentes e recolho informações.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p1" value="3">
+                    Exploro o ambiente para descobrir sua origem.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p1" value="4">
+                    Organizo a equipe para decidir o que fazer.
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>2. Qual atividade você prefere realizar na missão?</legend>
+
+                <label class="opcao">
+                    <input type="radio" name="p2" value="1" required>
+                    Construir equipamentos e resolver problemas técnicos.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p2" value="2">
+                    Fazer experimentos e investigar descobertas.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p2" value="3">
+                    Explorar territórios nunca visitados.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p2" value="4">
+                    Planejar tarefas e coordenar os participantes.
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Diante de um problema inesperado, o que vocêfaz?</legend>
+
+                <label class="opcao">
+                    <input type="radio" name="p3" value="1" required>
+                    Tento procurar uma solução prática.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p3" value="2">
+                    Vou em busca de pesquisar as causas antes de agir.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p3" value="3">
+                    Experimento caminhos diferentes.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p3" value="4">
+                    Avalio as opções e define uma estratégia.
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>4. Qual característica mais combina com você?</legend>
+
+                <label class="opcao">
+                    <input type="radio" name="p4" value="1" required>
+                    Criatividade para construir e consertar.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p4" value="2">
+                    Curiosidade para investigar e aprender.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p4" value="3">
+                    Coragem para explorar o desconhecido.
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p4" value="4">
+                    Organização para liderar e planejar.
+                </label>
+            </fieldset>
+
+            <button type="submit" class="botao">
+                Descobrir meu perfil
+            </button>
+
+            <p id="mensagem" role="alert" aria-live="polite"></p>
+
+        </form>
+
+        <section id="resultado" class="resultado" hidden aria-live="polite">
+            <p class="identificacao">RELATÓRIO DE RECRUTAMENTO</p>
+            <h2>Indentificamos o seu perfil,recruta!</h2>
+
+            <p id="dadosParticipante"></p>
+
+            <img id="imagemPerfil" src="" alt="Imagem do perfil identificado">
+
+            <h3 id="nomePerfil"></h3>
+            <p id="categoriaPerfil" class="categoria"></p>
+            <p id="descricaoPerfil"></p>
+
+            <div class="recomendacao">
+                <h4>Recomendação para a missão</h4>
+                <p id="textoRecomendacao"></p>
+            </div>
+
+            <button type="button" id="refazer" class="botao botao-secundario">
+                -refaça-
+            </button>
+        </section>
+
+        <footer>
+            <p>Missão Aura • O desconhecido te espera.Venha.</p>
+            <p class="codigo">Meu site</p>
+        </footer>
+    </main>
+
+</body>
+</html>
+
